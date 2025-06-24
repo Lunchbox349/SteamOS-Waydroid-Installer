@@ -1,5 +1,7 @@
 # SteamOS Android Waydroid Installer
 
+This is a fork of the SteamOS Android Waydroid Installer that includes gapps on the android tv 13 image
+
 A collection of tools that is packaged into an easy to use script that is streamlined and tested to work with the Steam Deck running on SteamOS.
 * The main program that does all the heavy lifting is [Waydroid - a container-based approach to boot a full Android system on a regular GNU/Linux system.](https://github.com/waydroid/waydroid)
 * Waydroid Toolbox to easily toggle some configuration settings for Waydroid.
