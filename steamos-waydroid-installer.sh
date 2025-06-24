@@ -21,7 +21,7 @@ PLUGIN_LOADER=/home/deck/homebrew/services/PluginLoader
 
 # android TV builds
 ANDROID11_TV_IMG=https://github.com/ryanrudolfoba/SteamOS-Waydroid-Installer/releases/download/Android11TV/lineage-18.1-20241220-UNOFFICIAL-10MinuteSteamDeckGamer-WaydroidATV.zip
-ANDROID13_TV_IMG=https://github.com/ryanrudolfoba/SteamOS-Waydroid-Installer/releases/download/Android13TV/lineage-20-20250117-UNOFFICIAL-10MinuteSteamDeckGamer-WaydroidATV.zip
+ANDROID13_TV_IMG=https://github.com/supechicken/waydroid-androidtv-build/releases/download/20250327/lineage-20.0-20250327-UNOFFICIAL-WaydroidATV_x86_64.zip
 
 # old android 13 builds as of May 03 2025
 #ANDROID13_GAPPS_IMG=https://sourceforge.net/projects/waydroid/files/images/system/lineage/waydroid_x86_64/lineage-20-20250503-GAPPS-waydroid_x86_64-system.zip/download#
@@ -37,7 +37,7 @@ ANDROID13_VENDOR_IMG=https://sourceforge.net/projects/waydroid/files/images/vend
 
 # android TV hash
 ANDROID11_TV_IMG_HASH=680971aaeb9edc64d9d79de628bff0300c91e86134f8daea1bbc636a2476e2a7
-ANDROID13_TV_IMG_HASH=2ac5d660c3e32b8298f5c12c93b1821bc7ccefbd7cfbf5fee862e169aa744f4c
+ANDROID13_TV_IMG_HASH=44d77c229f4737dfca6e360cdc06a6a2860717b504038b11b0216ed8a51f6a5a
 
 # old android 13 hash for build date as of May 03 2025
 #ANDROID13_GAPPS_IMG_HASH=3c6eb7235e2bb4c4568194a33147017b6ab2e136467e8c5864b30a3e3e09e39e
@@ -211,7 +211,7 @@ else
 		FALSE A11_GAPPS "Download official Android 11 image with Google Play Store."\
 		FALSE A13_NO_GAPPS "Download official Android 13 image without Google Play Store."\
 		FALSE A11_NO_GAPPS "Download official Android 11 image without Google Play Store."\
-		FALSE TV13_NO_GAPPS "Download unofficial Android 13 TV image without Google Play Store - thanks SupeChicken666 for the build instructions!" \
+		FALSE TV13_GAPPS "Download unofficial Android 13 TV image with Google Play Store - thanks SupeChicken666 for the build instructions!" \
 		FALSE TV11_NO_GAPPS "Download unofficial Android 11 TV image without Google Play Store - thanks SupeChicken666 for the build instructions!" \
 		FALSE EXIT "***** Exit this script *****")
 
@@ -244,7 +244,7 @@ else
  			echo -e "$current_password\n" | sudo -S waydroid init
 			check_waydroid_init
 
-		elif [ "$Choice" == "TV13_NO_GAPPS" ]
+		elif [ "$Choice" == "TV13_GAPPS" ]
 		then
 			prepare_custom_image_location
 			download_image $ANDROID13_TV_IMG $ANDROID13_TV_IMG_HASH ~/waydroid/custom/android13tv "Android 13 TV"
