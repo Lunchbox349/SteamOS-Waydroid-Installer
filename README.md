@@ -7,16 +7,21 @@ A collection of tools that is packaged into an easy to use script that is stream
 * Waydroid Toolbox to easily toggle some configuration settings for Waydroid.
 * [waydroid_script](https://github.com/casualsnek/waydroid_script) to easily add the libndk ARM translation layer and widevine.
 
-**NOTE - this repository uses `main` and `testing` branches.**
+Install Instructions
 
-**`testing`** - this is where new updates / features are pushed and sits for 1-2 weeks to make sure that bugs are squashed and eliminated. You can access it via this command -
+1. Use git to download repo
 ```
-git clone --depth=1 -b testing https://github.com/ryanrudolfoba/steamos-waydroid-installer
+git clone https://github.com/Lunchbox349/SteamOS-Waydroid-Installer
 ```
 
-**`main`** this is updated after 1-2 weeks in `testing` branch. You can access it via this command -
+2. cd into folder.
 ```
-git clone --depth=1 https://github.com/ryanrudolfoba/steamos-waydroid-installer
+cd SteamOS-Waydroid-Installer
+```
+
+3. Run script
+```
+./steamos-waydroid-installer.sh
 ```
 
 **Script has gone through several updates - this now allows you to install Android 11 / Android 13 and their TV counterparts - Android 11 TV / Android 13 TV!**
